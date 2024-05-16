@@ -10,6 +10,7 @@ global komorebic := "C:\Users\vinhp\scoop\apps\komorebi\0.1.25\komorebic-no-cons
 
 ; manipulate windows
 #t::Run komorebic . "toggle-float"
+#+t::Run komorebic . "toggle-monocle"
 
 ; create workspaces
 #!+n::Run komorebic . "new-workspace"
@@ -51,3 +52,5 @@ global komorebic := "C:\Users\vinhp\scoop\apps\komorebi\0.1.25\komorebic-no-cons
 #y::Run komorebic . "flip-layout vertical"
 
 ; TODO: handle mouse scrolling
+#WheelDown::Run komorebic . "cycle-workspace next"
+#WheelUp::Run komorebic . "cycle-workspace previous"
