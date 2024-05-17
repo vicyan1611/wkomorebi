@@ -1,4 +1,4 @@
-global komorebic := "C:\Users\vinhp\scoop\apps\komorebi\0.1.25\komorebic-no-console.exe "
+global komorebic := "C:\Users\" . A_UserName . "\scoop\apps\komorebi\0.1.25\komorebic-no-console.exe "
 ~LWin::Send "{Blind}{vkE8}" ;disable normal windows key but keep windows key combinnations work
 ; #q::
 ; {
@@ -6,10 +6,14 @@ global komorebic := "C:\Users\vinhp\scoop\apps\komorebi\0.1.25\komorebic-no-cons
 ; }
 
 ; manage program
-#q::Run "C:\Users\vinhp\AppData\Local\Microsoft\WindowsApps\wt.exe" ;run terminal
+#q::Run "C:\Users\" . A_UserName . "\AppData\Local\Microsoft\WindowsApps\wt.exe" ;run terminal
 #+r::Run komorebic . "retile"
 #+p::Run komorebic . "toggle-pause"
-
+#+o::
+{
+    Run komorebic . "stop"
+    Run komorebic . "start"
+}
 ; manipulate windows
 #t::Run komorebic . "toggle-float"
 #+t::Run komorebic . "toggle-monocle"
