@@ -41,16 +41,16 @@ class KomorebiListener:
                 result, data = win32file.ReadFile(self.pipe, bytes_to_read)
                 if not data.strip():
                     continue
-                
                 event = json.loads(data.decode("utf-8"))
                 event_name = event['event']['type']
-                event_state = event['event']['state']
-                if event_name and event_state:
-                    print(event_name)   
+                event_state = event['state']
+                
+                print(event_name)   
                 # break
         except (BaseException, Exception):
+            win32pipe.DisconnectNamedPipe(self.pipe)
             win32file.CloseHandle(self.pipe)
-            # print(Exception)
+            print("There are exceptions")
 if __name__ == "__main__":
     tko = KomorebiListener()
     tko.create_named_pipe()
