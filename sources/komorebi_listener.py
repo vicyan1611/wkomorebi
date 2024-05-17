@@ -1,5 +1,6 @@
-import win32pipe, win32file
+import win32pipe
 import logging
+from komorebic_client import WKomorebic
 BUFFER_SIZE = 1024 * 64
 class KomorebiListener:
 
@@ -7,6 +8,7 @@ class KomorebiListener:
         self.pipename = 'wkomorebi'
         self.buffer_size = BUFFER_SIZE
         self.pipe = None
+        self.komorebic = WKomorebic()
         pass
     
     def create_named_pipe(self) -> None:
@@ -19,5 +21,13 @@ class KomorebiListener:
                                               50,
                                               None)
         logging.info(f'Created named pip ${self.pipename}')
-        
+        print("created namedpipe")
 
+    def connect_komorebi(self) -> None:
+        self.komorebic.subscribe_pipe(self.pipename)
+        print("connect successfully")
+
+if __name__ == "__main__":
+    tko = KomorebiListener()
+    tko.create_named_pipe()
+    tko.connect_komorebi()
