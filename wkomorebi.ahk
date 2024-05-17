@@ -5,8 +5,10 @@ global komorebic := "C:\Users\vinhp\scoop\apps\komorebi\0.1.25\komorebic-no-cons
 ;     Run komorebic . "start"
 ; }
 
+; manage program
 #q::Run "C:\Users\vinhp\AppData\Local\Microsoft\WindowsApps\wt.exe" ;run terminal
-
+#+r::Run komorebic . "retile"
+#+p::Run komorebic . "toggle-pause"
 
 ; manipulate windows
 #t::Run komorebic . "toggle-float"
