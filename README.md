@@ -8,4 +8,4 @@
 
 Wkomorebi is a tray status indicator for the [komorebi](https://github.com/LGUG2Z/komorebi) windows tiling manager, and it also contains my AutoHotkey script that disables the Windows (SUPER) button but keeps combinations of Windows button working. Wkomorebi shows the focused workspace and monitor and can be use to interact with komorebi.
 
- I highly recommend using this config with the flow launcher, if you don't, you can edit the wkomorebi.ahk so that the Windows button still works.
+ I highly recommend using the [wkomorebi.ahk](https://github.com/vicyan1611/wkomorebi/blob/main/wkomorebi.ahk) config with the flow launcher, if you don't, you can edit the file so that the Windows button still works.
