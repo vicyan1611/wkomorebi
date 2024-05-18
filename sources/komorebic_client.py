@@ -10,6 +10,15 @@ class WKomorebic:
     def flip_layout(self) -> None:
         subprocess.run(args=[self.path, 'flip-layout', 'horizontal'], shell=True)
 
+    def start_komorebi(self) -> None:
+        subprocess.run(args=[self.path, 'start'], shell=True)
+
+    def stop_komorebi(self) -> None:
+        subprocess.run(args=[self.path, 'stop'], shell=True)
+
+    def pause_komorebi(self) -> None:
+        subprocess.run(args=[self.path, 'toggle-pause'], shell=True)
+
 if __name__ == "__main__":
     tkomo = WKomorebic()
     tkomo.flip_layout()
