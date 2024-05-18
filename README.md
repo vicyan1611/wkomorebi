@@ -25,3 +25,6 @@ https://github.com/vicyan1611/wkomorebi/assets/56020046/53cf1283-1826-42e0-9178-
 4. Run `wkomorebi.ahk`
 
 **Change hotkey config in [`wkomorebi.ahk`](https://github.com/vicyan1611/wkomorebi/blob/main/wkomorebi.ahk)**
+
+## Contribution
+Feel free to contribute to this project and make it better.
