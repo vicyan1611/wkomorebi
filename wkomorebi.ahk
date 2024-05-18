@@ -1,4 +1,4 @@
-global komorebic := "C:\Users\" . A_UserName . "\scoop\apps\komorebi\0.1.25\komorebic-no-console.exe "
+global komorebic := "C:\Users\" . A_UserName . "\scoop\apps\komorebi\0.1.25\komorebic-no-console.exe " ; change this path to the komorebi folder.
 ~LWin::Send "{Blind}{vkE8}" ;disable normal windows key but keep windows key combinnations work
 ; #q::
 ; {
