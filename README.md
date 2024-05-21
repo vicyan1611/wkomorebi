@@ -21,8 +21,10 @@ https://github.com/vicyan1611/wkomorebi/assets/56020046/53cf1283-1826-42e0-9178-
 
 1. Clone this repository.
 2. Install all packages in the requirements file using ` pip install -r requirements.txt`
-3. Run [`wkomorebi_tray.py`](https://github.com/vicyan1611/wkomorebi/blob/main/sources/wkomorebi_tray.py), note that it also starts the `komorebi` process. 
-4. Run `wkomorebi.ahk`
+3. Install [komorebi](https://github.com/LGUG2Z/komorebi) and `AutoHotKey`
+4. Run [`wkomorebi_tray.py`](https://github.com/vicyan1611/wkomorebi/blob/main/sources/wkomorebi_tray.py), note that it also starts the `komorebi` process. 
+5. Change path in `wkomorebi.ahk`
+6. Run `wkomorebi.ahk`
 
 **Change hotkey config in [`wkomorebi.ahk`](https://github.com/vicyan1611/wkomorebi/blob/main/wkomorebi.ahk)**
 

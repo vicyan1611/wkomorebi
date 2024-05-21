@@ -14,7 +14,7 @@ class WkomorebiTray:
         self.komorebic = WKomorebic()
         self.is_running = True
         self.komorebic.start_komorebi()
-
+        self.current_image_id = -1
         # init icon's images
         self.images = [None] * 10
         self.images[0] = Image.open('assets/p.png')
@@ -50,8 +50,10 @@ class WkomorebiTray:
         logging.info("connect successfully")
 
     def change_icon(self, workspace:int) -> None:
+        if self.current_image_id == workspace:
+            pass
         self.icon.icon=self.images[workspace+1]
-        pass
+        self.current_image_id = workspace
     
     def exit_wkomorebi(self) -> None:
         self.icon.stop()
